@@ -1,0 +1,111 @@
+/* 'Open Sans' font from Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+
+.register {
+  width: 400px;
+  margin: 16px auto;
+  font-size: 16px;
+  border-radius: 15px !important;
+ }
+
+
+ .register-header,
+.register p {
+ 
+  margin-top: 0;
+  margin-bottom: 0;
+  border-radius: 15px !important;
+}
+
+.register-triangle {
+  width: 0;
+  margin-right: auto;
+  margin-left: auto;
+  border: 12px solid transparent;
+  border-bottom-color: rgb(15, 66, 107);
+}
+
+.register-header {
+  background: rgba(0,0,0,0.5);
+  padding: 20px;
+  font-size: 1.4em;
+  font-weight: normal;
+  text-align: center;
+  
+  color: #fff;
+}
+
+.register-container {
+
+  padding: 12px;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 15px !important;
+}
+
+.register p {
+  padding: 12px;
+  
+}
+
+.register label{
+  font-family: inherit;
+  font-size: 16px;
+  font : bold
+}
+
+.register input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  padding: 16px;
+  outline: 0;
+  font-family: inherit;
+  font-size: 0.95em;
+  border-radius: 15px !important;
+  
+}
+
+.register input[type="email"],
+.register input[type="password"] {
+  background: #fff;
+  border-color: #bbb;
+  color: #555;
+}
+
+.register input[type="email"]:focus,
+.register input[type="password"]:focus {
+  border-color: #888;
+}
+
+.register input[type="submit"] {
+  border-radius: 15px !important;
+  background-color: #95c714 !important;
+  border: 0 !important;
+}
+
+.register input[type="button"] {
+  border-radius: 15px !important;
+  background-color: #95c714 !important;
+  border: 0 !important;
+}
+
+.register input[type="submit"]:hover {
+  border-radius: 15px !important;
+  background-color: #95c714 !important;
+  border: 0 !important;
+}
+
+.register input[type="submit"]:focus {
+  border-radius: 15px !important;
+  background-color: #95c714 !important;
+  border: 0 !important;
+}
+
+.has-error input[type="email"],
+.has-error input[type="password"] {
+    border-color: rgb(216, 12, 12);
+    color: rgb(230, 14, 14);
+}
