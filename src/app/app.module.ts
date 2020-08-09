@@ -8,7 +8,9 @@ import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
-import { HttpClientModule} from '@angular/common/http'
+import { HttpClientModule,  HTTP_INTERCEPTORS} from '@angular/common/http'
+import { ErrorInterceptor } from './_helpers/error.interceptor';
+import { AlertComponent } from './alert/alert.component';
 
 
 @NgModule({
@@ -17,7 +19,8 @@ import { HttpClientModule} from '@angular/common/http'
     LoginComponent,
     AdminComponent,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,7 @@ import { HttpClientModule} from '@angular/common/http'
     ReactiveFormsModule,
     HttpClientModule,  
   ],
-  providers: [],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

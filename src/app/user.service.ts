@@ -28,4 +28,16 @@ export class UserService {
   
   return this.http.get<any>(this.baseUrl + '/loginUser?' + 'userName=' +username+ '&passWord='+password,{ 'headers': headers });
  }
+
+ register(user: Object)
+ {
+   console.log("register service")
+   console.log(user);
+   //this.baseUrl = 'employeeRegister/admin';
+   return this.http.post(this.baseUrl + '/employeeRegister/admin', user,{ 'headers': headers } );
+ }
+
+ 
+
+
 }
