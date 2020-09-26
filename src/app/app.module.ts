@@ -11,7 +11,6 @@ import { RegisterComponent } from './register/register.component';
 import { HttpClientModule,  HTTP_INTERCEPTORS} from '@angular/common/http'
 import { ErrorInterceptor } from './_helpers/error.interceptor';
 import { AlertComponent } from './alert/alert.component';
-import { RoutesComponent } from './routes/routes.component';
 
 
 @NgModule({
@@ -21,9 +20,8 @@ import { RoutesComponent } from './routes/routes.component';
     AdminComponent,
     HomeComponent,
     RegisterComponent,
-    AlertComponent,
-    RoutesComponent
-  ],
+    AlertComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
