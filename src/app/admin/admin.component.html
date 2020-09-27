@@ -152,7 +152,7 @@ to get the desired effect
             <a class="dropdown-item" href="#">Profile</a>
             <a class="dropdown-item" href="#">Settings</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Log out</a>
+            <button class="dropdown-item" (click)="logOut()">Log out</button>
           </div>
         </li>
       </ul>
@@ -275,12 +275,12 @@ to get the desired effect
     <!-- /.content-header -->
     <!-- Main Footer add at bottom of page -->
    </div>
-   <div>
+   
+   </body>
+  <app-routes></app-routes>
+  <div>
     <router-outlet></router-outlet>
   </div>
-   </body>
-  
-    
   
     
     <!-- Content Wrapper. Contains page content -->

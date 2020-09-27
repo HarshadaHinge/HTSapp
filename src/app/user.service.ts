@@ -37,6 +37,12 @@ export class UserService {
    return this.http.post(this.baseUrl + '/employeeRegister/admin', user,{ 'headers': headers } );
  }
 
+ logOut()
+ {
+   console.log("Admin logout service")
+   return this.http.get(this.baseUrl + '/logoutEmployee');
+ }
+
  
 
 
