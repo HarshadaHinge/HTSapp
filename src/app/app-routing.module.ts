@@ -4,13 +4,17 @@ import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
-
+import { LocationComponent } from './location/location.component';
+import { UpdateLocationComponent } from './update-location/update-location.component';
 
 const routes: Routes = [
   {path: '' , component:LoginComponent},
   {path: 'admin', component: AdminComponent},
   {path: 'home', component: HomeComponent},
   {path: 'register', component: RegisterComponent},
+  {path: 'location', component: LocationComponent},
+  {path: 'location-update', component: UpdateLocationComponent},
+
 ];
 
 @NgModule({

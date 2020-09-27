@@ -11,6 +11,9 @@ import { RegisterComponent } from './register/register.component';
 import { HttpClientModule,  HTTP_INTERCEPTORS} from '@angular/common/http'
 import { ErrorInterceptor } from './_helpers/error.interceptor';
 import { AlertComponent } from './alert/alert.component';
+import { LocationComponent } from './location/location.component';
+import { UpdateLocationComponent } from './update-location/update-location.component';
+
 
 
 @NgModule({
@@ -20,7 +23,10 @@ import { AlertComponent } from './alert/alert.component';
     AdminComponent,
     HomeComponent,
     RegisterComponent,
-    AlertComponent
+    AlertComponent,
+    LocationComponent,
+    UpdateLocationComponent,
+  
   ],
   imports: [
     BrowserModule,
@@ -28,6 +34,7 @@ import { AlertComponent } from './alert/alert.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,  
+
   ],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },],
   bootstrap: [AppComponent]

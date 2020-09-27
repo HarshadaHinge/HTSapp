@@ -62,7 +62,42 @@ html{
 </div>
 
 <div class="main">
-  <h2>Admin Dashboard</h2>
+  <h3>Admin Dashboard</h3>
+
+<button>
+<a routerLink = '/location-update'> + Add </a>
+</button>
+
+<button >
+ Delete 
+ 
+</button>
+
+<h1>
+  
+</h1>
+
+
+<table>
+  <th >
+    <input type="checkbox">
+  </th> 
+    <th>Location Name</th>
+    <th>Building Names</th>
+    <th>% of the cost is borne by GLTi</th>
+  
+  <tr *ngFor = "let product of results">
+    <td ><input type="checkbox"></td>
+      <td>{{product.locationName}}</td>
+      <td>{{product.building1}} <br>
+          {{product.building2}} <br>
+          {{product.building3}} <br>
+          {{product.building4}} <br>
+      </td>
+      <td>{{product.cost}}</td>
+    
+  </tr>
+</table>
 </div>
    
 </body>
