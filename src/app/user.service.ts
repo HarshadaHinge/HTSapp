@@ -40,7 +40,7 @@ export class UserService {
  logOut()
  {
    console.log("Admin logout service")
-   return this.http.get(this.baseUrl + '/logoutEmployee');
+   return this.http.get(this.baseUrl + '/employeeLogout');
  }
 
  
