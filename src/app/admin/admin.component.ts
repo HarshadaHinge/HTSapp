@@ -31,7 +31,7 @@ export class AdminComponent implements OnInit {
     this.userService.logOut()
     .subscribe(
       data=>{
-             this.router.navigateByUrl('/admin');
+             this.router.navigateByUrl('/');
       },
       error => console.log(error));  
     }
