@@ -1,0 +1,28 @@
+
+td{
+    border: 1px solid black;
+    font-size: 10px;
+    padding: 10;
+    
+}
+th{
+    background-color: rgb(253, 13, 5);
+    border: 1px solid black;
+    width: 423px;
+
+}
+input{
+    width: 20px;
+}
+a{
+    font-style: bold;
+    text-decoration-color:  blue;
+
+}
+button{
+    text-decoration-color: red;
+    font-style: normal;
+}
+table{
+    background-color: white;
+}

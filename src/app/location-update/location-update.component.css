@@ -1,0 +1,17 @@
+table
+{
+    border: 1px solid black;
+    font-size: 15px;
+    padding: 10px;
+}
+td{
+    border: 1px solid black;
+    font-size: 15px;
+    padding: 10px;
+    width: 423px;
+}
+th{
+    height: 10px;
+
+}
+

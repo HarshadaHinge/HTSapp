@@ -260,8 +260,10 @@ to get the desired effect
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark"> Admin Dashboard </h1>
+            <h1 class="m-0 text-dark"> Admin Dashboard </h1> <br>
+            <h3 class="m-0 text-dark"> Details </h3>
           </div><!-- /.col -->
+          
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -269,6 +271,65 @@ to get the desired effect
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
+        <div>
+            <form ngNativeValidate #productData="ngForm" (ngSubmit)="insertRecord(productData)" class="form form-register" id="formNewProduct">
+                <table>
+                  <tbody>
+                  <tr>
+                  <td>Location Name<span style="color: #ff0000;" >*</span></td>
+                  <td>
+                    <textarea id="locationName" name="locationName" required rows="2" cols="70" ngModel >
+                      
+                      </textarea>
+                     
+                  </td>
+                  </tr>
+                  <tr>
+                  <td>Building Names<span style="color: #ff0000;">*</span></td>
+                  <td>
+                    <textarea id="building1" name="building1" rows="4" cols="70" ngModel required>
+                      
+                    </textarea>
+                  </td>
+                  </tr>
+                  <tr>
+                  <td>Comments<span style="color: #ff0000;">*</span></td>
+                  <td>
+                    <textarea id="comments" name="comments" rows="2" cols="70" ngModel required>
+                      
+                    </textarea>
+                   
+                  </td>
+                  </tr>
+                  <tr>
+                  <td>% of this cost is borne by GLTi<span style="color: #ff0000;">*</span></td>
+                  <td>
+                    <textarea id="cost" name="cost" rows="2" cols="70" ngModel required>
+                      
+                    </textarea>
+                    
+                  </td>
+                  </tr>
+                  
+                  </tbody>
+                  </table>
+                  
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    
+                    <button type="submit">
+                        Save 
+                       
+                    </button>
+                    
+                    <button>
+                      <a routerLink = "/location"> < back </a>
+                    </button>
+                  
+                </form>                
+        </div>
       </div><!-- /.container-fluid -->
     </div>
     </div>
@@ -283,3 +344,4 @@ to get the desired effect
     
     <!-- Content Wrapper. Contains page content -->
     
+
