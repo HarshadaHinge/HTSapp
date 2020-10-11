@@ -36,13 +36,15 @@ export class AddLocationComponent implements OnInit {
   }
 
   insertRecord(form){
+
+    
     this.user.postLocation(form.value).subscribe((res : Add_Location) => {
     //this.toastr.success('Inserted successfully', 'EMP. Register');
     this.isAdded=true;
     
-  },
-  (error: any) => console.log(error)
-  );
+    },
+   (error: any) => console.log(error)
+    );
   
   
   

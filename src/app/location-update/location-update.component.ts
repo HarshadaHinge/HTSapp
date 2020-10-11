@@ -1,27 +1,35 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';  
+import { Observable, from } from 'rxjs'; 
+import { HttpHeaders } from '@angular/common/http';
 import { UserService } from '../user.service';
 import { Add_Location } from '../add_location';
-import { LocationComponent } from '../location/location.component';
+import { NgIf } from '@angular/common';
 import { Router,RouterOutlet } from  '@angular/router';
 import { ActivatedRoute } from '@angular/router';
-
+import { UpdateData } from '../updateData';
 
 @Component({
-  selector: 'app-get-location',
-  templateUrl: './get-location.component.html',
-  styleUrls: ['./get-location.component.css']
+  selector: 'app-location-update',
+  templateUrl: './location-update.component.html',
+  styleUrls: ['./location-update.component.css']
 })
-export class GetLocationComponent implements OnInit {
+export class LocationUpdateComponent implements OnInit {
 
+  formData: Add_Location;
   
   results2: Add_Location;
+  message = '';
+  objPuts: UpdateData;
   constructor(private userService: UserService, private router: Router,private route: ActivatedRoute
     ) { 
+   
   }
 
   ngOnInit(): void {
     
     const location: string = this.route.snapshot.queryParamMap.get('location');
+
     this.userService.fetchLocation(location).subscribe(data => 
       {this.results2=data});
   }
@@ -36,5 +44,17 @@ export class GetLocationComponent implements OnInit {
     }
   }
     
-      
+    updateLocation(dataBody)
+    {
+      const location: string = this.route.snapshot.queryParamMap.get('location');
+      this.userService.updateLocation(location,dataBody.value).subscribe((res : Add_Location) => {
+     
+       
+        
+        },
+       (error: any) => console.log(error)
+        );
+    }
+  
+  
 }

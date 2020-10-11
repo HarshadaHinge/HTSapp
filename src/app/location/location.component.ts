@@ -14,13 +14,15 @@ import { Router,RouterOutlet } from  '@angular/router';
 })
 export class LocationComponent implements OnInit {
 
-  constructor(private userService: UserService, private router: Router) { }
+  constructor(private userService: UserService, private router: Router) { 
+    //this.formData= new Add_Location();
+  }
 
-  formData  : Add_Location;
-   //public results:object ={} ;
+  formData: Add_Location ;
+   message: string;
    id: number;
   public results=[];
-
+  
   ngOnInit(): void {
     this.userService.fetchData().subscribe(data => this.results=data);
   }
@@ -30,15 +32,20 @@ export class LocationComponent implements OnInit {
     if(confirm("Are you sure you wish to logout?")){
     this.userService.logOut()
     .subscribe(
-      data=>console.log(data),error => console.log(error));
+      (data)=>console.log(data),error => console.log(error));
       this.router.navigateByUrl('/')
     }
   }
 
-  getRecord(){
-    var place=document.getElementById('placeName').innerText;
-    this.userService.setLocation(place);
-    console.log(place);
-  }
+deleteRecord(index){
+  var place=document.getElementById('placeName'+index).innerText;
 
+  this.userService.deleteLocation(place).subscribe(response => {
+    
+    
+    },
+   (error: any) => console.log(error)
+    );
+  
+}
 }

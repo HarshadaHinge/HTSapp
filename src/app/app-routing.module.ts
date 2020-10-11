@@ -7,6 +7,7 @@ import { RegisterComponent } from './register/register.component';
 import { LocationComponent } from './location/location.component';
 import { GetLocationComponent } from './get-location/get-location.component';
 import { AddLocationComponent } from './add-location/add-location.component'
+import { LocationUpdateComponent } from './location-update/location-update.component';
 
 const routes: Routes = [
   {path: '' , component:LoginComponent},
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'location', component: LocationComponent},
   {path: 'location-add', component: AddLocationComponent},
-  {path: 'location-name', component: GetLocationComponent}
+  {path: 'location-name', component: GetLocationComponent},
+  {path: 'location-update', component: LocationUpdateComponent}
 ];
 
 @NgModule({

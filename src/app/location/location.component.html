@@ -274,26 +274,27 @@ to get the desired effect
                 <a routerLink = '/location-add'> + Add </a>
                 </button>
                 
-                <button >
-                 Delete 
-                 
-                </button>
+                
                 
                 <h1>
                   
                 </h1>
-                <form (click)=getRecord()>
+                
                 <table>
                   <th >
-                    <input type="checkbox">
+                  
                   </th> 
                     <th>Location Name</th>
                     <th>Building Names</th>
                     
                   
-                  <tr *ngFor = "let product of results">
-                    <td ><input type="checkbox"></td>
-                      <td  id="placeName" name="placeName" ><a href="/location-name"> {{product.locationName}} </a>  </td>
+                  <tr *ngFor = "let product of results;
+                                let i=index">
+                    <td style="width: 8%;" >
+                    <button (click)=deleteRecord(i)>Delete</button>
+                    </td>
+                    <td  id="placeName{{i}}" name="placeName{{i}}" ><a href="/location-name?location={{ product.locationName }}"> {{product.locationName}} </a>  </td>
+
                       <td>{{product.building1}} <br>
                           {{product.building2}} <br>
                           {{product.building3}} <br>
@@ -304,7 +305,7 @@ to get the desired effect
                   </tr>
                 
                 </table>
-            </form>
+            
         </div>
       </div><!-- /.container-fluid -->
     </div>

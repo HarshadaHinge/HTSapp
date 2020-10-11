@@ -14,6 +14,8 @@ import { AlertComponent } from './alert/alert.component';
 import { LocationComponent } from './location/location.component';
 import { AddLocationComponent } from './add-location/add-location.component';
 import { GetLocationComponent } from './get-location/get-location.component';
+import { LocationUpdateComponent } from './location-update/location-update.component';
+
 
 
 @NgModule({
@@ -26,7 +28,8 @@ import { GetLocationComponent } from './get-location/get-location.component';
     AlertComponent,
     LocationComponent,
     AddLocationComponent,
-    GetLocationComponent
+    GetLocationComponent,
+    LocationUpdateComponent
    ],
   imports: [
     BrowserModule,
@@ -34,6 +37,7 @@ import { GetLocationComponent } from './get-location/get-location.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,  
+    
   ],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },],
   bootstrap: [AppComponent]
