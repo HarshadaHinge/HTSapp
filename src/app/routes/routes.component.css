@@ -1,0 +1,52 @@
+table
+{   table-layout:auto;
+    border: 1px solid black;
+    font-size: 15px;
+    padding: 10px;
+}
+td{
+    border: 1px solid black;
+    font-size: 15px;
+    padding: 10px;
+    width: 423px;
+}
+th{
+    height: 10px;
+
+}
+
+  li {
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    background-color: #EEE;
+    border-radius: 4px;
+  }
+  li:hover {
+    color: #607D8B;
+    background-color: #DDD;
+    left: .1em;
+  }
+  li.selected {
+    background-color: #CFD8DC;
+    color: white;
+  }
+  li.selected:hover {
+    background-color: #BBD8DC;
+    color: white;
+  }
+  badge {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    border:1px solid black
+  }
+
+  
+
+  .heroes {
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: 0;
+    width: 15em;
+  }

@@ -1,0 +1,64 @@
+
+<div>
+  <table class="table table-bordered" table-layout="auto">
+  <thead>
+      <tr>
+          <th><button class="btn btn-info" style="width:100px" (click)="addUser()"> New</button></th>
+      </tr>
+  </thead>
+  
+
+  
+  <table class="table table-striped" >
+  
+   <thead> 
+     
+    <tr>
+      <th class="hidden" style="width: 10%;">Location Name</th>
+      <th style="width: 10%;">Route No</th>
+      <th style="width: 10%;">Bus Route</th>
+      <th style="width: 10%;">Boarding Location</th>
+      <th style="width: 10%;">Cost</th>
+      <th style="width: 10%;">Total Available Seats</th>
+    </tr>
+  </thead>
+    <tbody>
+    <tr *ngFor = "let product of results2">
+      <td colspan="6">
+        <!--<a type="button" (click)="onSelect(item)"class="glyphicon glyphicon-check">{{product.locationName}}</button>-->
+          
+          <li (click)="onSelect(product.locationName)"  >{{product.locationName}}</li>
+      </td>
+      
+      </tr>
+    </tbody>
+  </table>
+</table>
+
+<div *ngIf='show'>
+ <table class="table table-bordered">
+  
+   <!-- <li>{{routeDetails.id}}</li> its workrd  *ngFor= "let details of routeDetails"-->
+   <thead> 
+    <tr>
+      <th>Route No</th>
+      <th>Bus Route</th>
+      <th>Total Available Seats</th>
+      <th>Boarding Location</th>
+      <th>Drop Location</th>
+      <th>Cost</th>
+     
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor= "let details of routeDetails">
+        <td>{{details.routeNumber}}</td>
+        <td>{{details.routeName}}</td>
+        <td>{{details.busCapacity}}</td>
+        <td>{{details.boradingLocations}}</td>
+        <td>{{details.dropLocations}}</td> 
+        <td>{{details.cost}}</td>
+       </tr>
+  </tbody>
+</table>
+</div>

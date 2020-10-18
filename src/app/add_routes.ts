@@ -1,25 +1,23 @@
-
-export class Add_Location {
+export class Add_Routes {
     
     id: number;
-    locationName: String;
+    locationName: string;
+    routeNumber: String;
+    routeName: string;
+    busCapacity: string;
+    boradingLocations: string[];
+    dropLocations: string;
     cost: string;
-    comments: string;
-    building1: string;
-    building2: string;
-    building3: string;
-    building4: string;
+    
 
     constructor(){
-        this.locationName="";
+        this.routeNumber="";
+        
         /*this.cost= "";
         this.comments= "";
         this.building1= "";
         this.building2= "";
         this.building3= "";
         this.building4= "";*/
-        
     }
-
-
 }

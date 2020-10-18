@@ -11,11 +11,26 @@ import { RegisterComponent } from './register/register.component';
 import { HttpClientModule,  HTTP_INTERCEPTORS} from '@angular/common/http'
 import { ErrorInterceptor } from './_helpers/error.interceptor';
 import { AlertComponent } from './alert/alert.component';
+
+import { RoutesComponent } from './routes/routes.component';
+import { AddRoutesComponent } from './add-routes/add-routes.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RootNavComponent } from './root-nav/root-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { ShowRoutesComponent } from './show-routes/show-routes.component';
+import { CommonModule } from "@angular/common";
+
 import { LocationComponent } from './location/location.component';
 import { AddLocationComponent } from './add-location/add-location.component';
 import { GetLocationComponent } from './get-location/get-location.component';
 import { LocationUpdateComponent } from './location-update/location-update.component';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
+
 
 
 
@@ -27,19 +42,34 @@ import { EmployeeDetailComponent } from './employee-detail/employee-detail.compo
     HomeComponent,
     RegisterComponent,
     AlertComponent,
+
+    RoutesComponent,
+    AddRoutesComponent,
+    RootNavComponent,
+    ShowRoutesComponent,
+
     LocationComponent,
     AddLocationComponent,
     GetLocationComponent,
     LocationUpdateComponent,
     EmployeeDetailComponent
+
    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule,  
-    
+
+    HttpClientModule,
+    BrowserAnimationsModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule, 
+    CommonModule 
   ],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },],
   bootstrap: [AppComponent]
