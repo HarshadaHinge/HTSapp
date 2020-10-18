@@ -41,7 +41,7 @@ deleteRecord(index){
   var place=document.getElementById('placeName'+index).innerText;
 
   this.userService.deleteLocation(place).subscribe(response => {
-    
+    this.userService.fetchData().subscribe(data => this.results=data);
     
     },
    (error: any) => console.log(error)
