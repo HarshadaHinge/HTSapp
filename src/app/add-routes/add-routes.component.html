@@ -1,0 +1,77 @@
+<div>
+  
+  <form ngNativeValidate #productData="ngForm" (ngSubmit)="insertRecord(productData)" class="form form-register" id="formNewProduct">
+    <table>
+      <tbody>
+        <tr>
+          <td>Location Name<span style="color: #ff0000;" >*</span></td>
+          <td>
+            <textarea id="locationName" name="locationName" required rows="2" cols="70" ngModel >
+           </textarea>
+             
+          </td>
+          </tr>
+      <tr>
+      <td>Route No<span style="color: #ff0000;" >*</span></td>
+      <td>
+        <textarea id="routeNumber" name="routeNumber" required rows="2" cols="70" ngModel >
+       </textarea>
+         
+      </td>
+      </tr>
+      <tr>
+      <td>Bus Route<span style="color: #ff0000;">*</span></td>
+      <td>
+        <textarea id="routeName" name="routeName" rows="2" cols="70" ngModel required>
+        </textarea>
+      </td>
+      </tr>
+      <tr>
+      <td>Boarding Location<span style="color: #ff0000;">*</span></td>
+      <td>
+        
+        <textarea id="boardingLocation1" ng-list="," name="boardingLocation1" rows="4" cols="70" ngModel required>
+        </textarea>
+      </td>
+      </tr>
+
+      <tr>
+        <td>Drop Location<span style="color: #ff0000;">*</span></td>
+        <td>
+          <textarea id="dropLocation1" ng-list="," name="dropLocation1" rows="4" cols="70" ngModel required>
+          </textarea>
+        </td>
+      </tr>
+
+      <tr>
+      <td>Total Cost for this route<span style="color: #ff0000;">*</span></td>
+      <td>
+        <textarea id="cost" name="cost" rows="2" cols="70" ngModel required>
+        </textarea>
+      </td>
+      </tr>
+
+      <tr>
+        <td>Total Available Seats<span style="color: #ff0000;">*</span></td>
+        <td>
+          <textarea id="busCapacity" name="busCapacity" rows="2" cols="70" ngModel required>
+        </textarea>
+        </td>
+      </tr>
+      
+      </tbody>
+      </table>
+      
+        <br>
+        <br>
+        <br>
+        <br>
+        
+        <button type="submit">
+            Save 
+        </button>
+        
+        
+      
+    </form>
+</div>

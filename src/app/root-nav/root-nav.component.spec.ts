@@ -1,21 +1,21 @@
+import { LayoutModule } from '@angular/cdk/layout';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { AdminComponent } from './admin.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { LayoutModule } from '@angular/cdk/layout';
 
-describe('AdminComponent', () => {
-  let component: AdminComponent;
-  let fixture: ComponentFixture<AdminComponent>;
+import { RootNavComponent } from './root-nav.component';
+
+describe('RootNavComponent', () => {
+  let component: RootNavComponent;
+  let fixture: ComponentFixture<RootNavComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AdminComponent ],
+      declarations: [RootNavComponent],
       imports: [
         NoopAnimationsModule,
         LayoutModule,
@@ -25,17 +25,16 @@ describe('AdminComponent', () => {
         MatSidenavModule,
         MatToolbarModule,
       ]
-    })
-    .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AdminComponent);
+    fixture = TestBed.createComponent(RootNavComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should compile', () => {
     expect(component).toBeTruthy();
   });
 });

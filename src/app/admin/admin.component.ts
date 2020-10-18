@@ -27,18 +27,12 @@ export class AdminComponent implements OnInit {
 
    logOut(){
     console.log("logout btn click!")
-    if(confirm("Are you sure you wish to logout?"))
+    if(confirm("Are you sure you wish to logout?")){
     this.userService.logOut()
     .subscribe(
-      data=>{
-             this.router.navigateByUrl('/');
-      },
-      error => console.log(error));  
+      data=>console.log(data),error => console.log(error));
+      this.router.navigateByUrl('/')
     }
+  }
    
-  
-
-  
-
-
 }
