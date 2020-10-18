@@ -25,7 +25,7 @@ export class AdminComponent implements OnInit {
     return this.authForm.controls;
    }
 
-   logOut(){
+  logOut(){
     console.log("logout btn click!")
     if(confirm("Are you sure you wish to logout?")){
     this.userService.logOut()

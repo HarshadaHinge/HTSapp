@@ -1,0 +1,62 @@
+<div>
+                
+  <table>
+    <tbody >
+  
+    <tr>
+    <td>Location Name<span style="color: #ff0000;" >*</span></td>
+    <td>
+      
+          {{results2.locationName}}
+      
+       
+    </td>
+    </tr>
+    <tr>
+    <td>Building Names<span style="color: #ff0000;">*</span></td>
+    <td>{{results2.building1}} <br>
+      {{results2.building2}} <br>
+      {{results2.building3}} <br>
+      {{results2.building4}} <br>
+  </td>
+    </tr>
+    <tr>
+    <td>Comments<span style="color: #ff0000;">*</span></td>
+    <td>
+      {{results2.comments}}
+     
+    </td>
+    </tr>
+    <tr>
+    <td>% of this cost is borne by GLTi<span style="color: #ff0000;">*</span></td>
+    <td>
+      {{results2.cost}}
+      
+    </td>
+    </tr>
+    
+
+    </tbody>
+    </table>
+    
+      <br>
+      <br>
+      <br>
+      <br>
+      
+      <button >
+        <a [routerLink]="['location-update']" [queryParams]="{'location': results2.locationName }" routerLinkActive="active" > Update</a>
+          
+         
+      </button>
+      
+      <button>
+        <a routerLink="/admin/location"> < back </a>
+      </button>
+    
+
+
+      <router-outlet></router-outlet>
+
+           
+</div>

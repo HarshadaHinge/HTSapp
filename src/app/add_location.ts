@@ -1,3 +1,4 @@
+
 export class Add_Location {
     
     id: number;
@@ -19,4 +20,6 @@ export class Add_Location {
         this.building4= "";*/
         
     }
+
+
 }

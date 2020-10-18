@@ -1,0 +1,38 @@
+<div>
+  <button>
+      <a [routerLink]="['location-add']" routerLinkActive="active" > + Add </a> 
+      
+      </button>
+      
+      
+      
+      <h1>
+        
+      </h1>
+      
+      <table>
+        <th >
+        
+        </th> 
+          <th>Location Name</th>
+          <th>Building Names</th>
+          
+        
+        <tr *ngFor = "let product of results;
+                      let i=index">
+          <td style="width: 8%;" >
+          <button (click)=deleteRecord(i) >Delete  </button>
+          </td>
+          <td  id="placeName{{i}}" name="placeName{{i}}" ><a [routerLink]="['location-name']" [queryParams]="{'location': product.locationName }" routerLinkActive="active"> {{product.locationName}} </a>  </td> 
+
+            <td>{{product.building1}} <br>
+                {{product.building2}} <br>
+                {{product.building3}} <br>
+                {{product.building4}} <br>
+            </td>
+          
+           
+        </tr>
+      </table>
+      <router-outlet></router-outlet>
+</div>
