@@ -15,6 +15,7 @@ import { LocationComponent } from './location/location.component';
 import { AddLocationComponent } from './add-location/add-location.component';
 import { GetLocationComponent } from './get-location/get-location.component';
 import { LocationUpdateComponent } from './location-update/location-update.component';
+import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
 
 
 
@@ -29,7 +30,8 @@ import { LocationUpdateComponent } from './location-update/location-update.compo
     LocationComponent,
     AddLocationComponent,
     GetLocationComponent,
-    LocationUpdateComponent
+    LocationUpdateComponent,
+    EmployeeDetailComponent
    ],
   imports: [
     BrowserModule,

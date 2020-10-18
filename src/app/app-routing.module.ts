@@ -10,6 +10,7 @@ import { AddLocationComponent } from './add-location/add-location.component'
 import { LocationUpdateComponent } from './location-update/location-update.component';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
+import { EmployeeDetailComponent } from './employee-detail/employee-detail.component'
 
 const routes: Routes = [
   {path: '' , component:LoginComponent},
@@ -17,7 +18,8 @@ const routes: Routes = [
   
   children:[
   
-  {path: 'location', component: LocationComponent,},
+  {path: 'location', component: LocationComponent},
+  {path: 'employee-detail', component: EmployeeDetailComponent},
   {path: 'location/location-add', component: AddLocationComponent},
   {path: 'location/location-name', component: GetLocationComponent,},
   {path: 'location/location-name/location-update', component: LocationUpdateComponent}
