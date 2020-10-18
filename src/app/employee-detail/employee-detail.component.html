@@ -1,0 +1,30 @@
+<div>
+        
+        <h1>
+          
+        </h1>
+        
+        <table>
+          
+            <th>User Name</th>
+            <th>PSID </th>
+            <th>Permanent Employee</th>
+            <th>Department</th>
+            <th>Location</th>
+            <th>Extn</th>
+            <th>Mob Num</th>
+          
+          <tr >
+            <td> {{results.user.firstName}} {{results.user.lastName}} </td> 
+  
+              <td> {{results.userDetailedInfo.psid}}</td>
+              <td>Yes</td>
+            <td>{{results.userDetailedInfo.department}}</td>   
+            <td>{{results.userDetailedInfo.address}}</td>
+            <td>{{results.userDetailedInfo.extensionNumber}}</td>
+            <td>{{results.user.phoneNumber}}</td>         
+             
+          </tr>
+        </table>
+        <router-outlet></router-outlet>
+  </div>

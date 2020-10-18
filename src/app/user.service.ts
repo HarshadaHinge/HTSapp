@@ -79,4 +79,8 @@ export class UserService {
       console.log(param);
       return this.http.delete(this.baseUrl+'/deleteLocation/'+param,{ 'headers': headers });
     }
+    fetchEmployeeData():Observable <any>{
+
+      return this.http.get<any>(this.baseUrl+'/RegisteredEmployeeInfo/45023849',{ 'headers': headers });
+     }
 }
