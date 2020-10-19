@@ -1,12 +1,13 @@
 <div>
+ 
   <form ngNativeValidate #productData="ngForm" (ngSubmit)="updateLocation(productData)" class="form form-register" id="formNewProduct">
       <table>
         <tbody>
         <tr>
         <td>Location Name<span style="color: #ff0000;" >*</span></td>
         <td>
-          <textarea id="locationName" name="locationName" required rows="2" cols="70" ngModel placeholder="{{results2.locationName}}" >
-             
+          <textarea id="locationName" name="locationName" required rows="2" cols="70" ngModel placeholder="{{results2.locationName}}" disabled> {{results2.locationName}}
+    
             </textarea>
            
         </td>
@@ -50,12 +51,12 @@
           <br>
           
           <button type="submit">
-              Save 
+              Update 
              
           </button>
           
           <button>
-            <a routerLink="/admin/location"> < back </a>
+            <a routerLink="/admin/location"> Cancel </a>
           </button>
           <router-outlet></router-outlet>
       </form>                

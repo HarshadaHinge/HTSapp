@@ -31,7 +31,7 @@ export class EmployeeDetailComponent implements OnInit {
     if(confirm("Are you sure you wish to logout?")){
     this.userService.logOut()
     .subscribe(
-      (data)=>console.log(data),error => console.log(error));
+      (data)=>console.log(data),error => alert("Sorry we are facing some issue! Please try later"));
       this.router.navigateByUrl('/')
     }
   }

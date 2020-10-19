@@ -43,9 +43,10 @@ export class AddLocationComponent implements OnInit {
     this.isAdded=true;
     
     },
-   (error: any) => console.log(error)
+   (error: any) => alert("Sorry we are facing some issue! Please try later")
     );
-  
+    alert("Location added successfully!");
+    this.router.navigate(['admin/location']);
   
   
 }
