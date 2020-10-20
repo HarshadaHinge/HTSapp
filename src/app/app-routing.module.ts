@@ -15,8 +15,7 @@ import { LocationComponent } from './location/location.component';
 import { GetLocationComponent } from './get-location/get-location.component';
 import { AddLocationComponent } from './add-location/add-location.component'
 import { LocationUpdateComponent } from './location-update/location-update.component';
-import { CommonModule } from '@angular/common';
-import { BrowserModule } from '@angular/platform-browser';
+
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component'
 
 

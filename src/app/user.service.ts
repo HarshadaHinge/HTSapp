@@ -37,7 +37,7 @@ export class UserService {
   login(username, password) {
   console.log("UserService");
   
-  return this.http.get<any>(this.baseUrl + '/loginUser?' + 'userName=' +username+ '&passWord='+password,{ 'headers': headers });
+  return this.http.get<any>(this.baseUrl + '/employeeLogin?' + 'userName=' +username+ '&passWord='+password,{ 'headers': headers });
  }
 
  register(user: Object)

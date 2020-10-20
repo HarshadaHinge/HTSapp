@@ -52,8 +52,10 @@ export class LocationUpdateComponent implements OnInit {
        
         
         },
-       (error: any) => console.log(error)
+       (error: any) => alert("Sorry we are facing some issue! Please try later")
         );
+        alert("Location updated successfully!");
+       this.router.navigate(['admin/location']);
     }
   
   
